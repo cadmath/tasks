@@ -33,9 +33,38 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                             <ol class="breadcrumb page-breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                                <li class="breadcrumb-item"><a href="#">PHP</a></li>
-                                <li class="breadcrumb-item active">Функции</li>
+                                <?php
+                                /* Здесь хотел сделать через вложенный foreach но $link имеет тип string
+                                    $arr = [
+                                        //link
+                                       "Главная",
+                                       "PHP",
+                                        //text
+                                       ["Функции"]
+                                    ];
+
+                                    foreach($arr as  $link){
+                                        echo '<li class="breadcrumb-item"><a href="#">'.$link.'</a></li>';
+                                        foreach($link as $text){
+                                            echo '<li class="breadcrumb-item active">'.$text.'</li>';
+                                        }
+                                    }
+                                 */
+                                $menu = [
+                                    "Главная",
+                                    "PHP"
+                                 ];
+                                 $text = [
+                                     "Функции"
+                                 ];
+ 
+                                 foreach($menu as  $link){
+                                     echo '<li class="breadcrumb-item"><a href="#">'.$link.'</a></li>';
+                                 }
+                                 foreach($text as $val){
+                                     echo '<li class="breadcrumb-item active">'.$val.'</li>';
+                                 }
+                                ?>
                             </ol>
                         </div>
                     </div>
