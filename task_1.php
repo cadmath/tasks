@@ -59,8 +59,6 @@
                                             }
                                             
                                         ?>
-                                 
-                                        
                                     </ul>
                                     <div class="filter-message js-filter-message mt-0 fs-sm"></div>
                                 </div>
