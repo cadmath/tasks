@@ -33,58 +33,70 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                            <div class="d-flex flex-wrap demo demo-h-spacing mt-3 mb-3">
+                           
+<?php
+							$arr_user = [
+								[
+									'foto' => 'img/demo/authors/sunny.png',
+									'alt_foto' => 'Sunny A.',
+									'portfolio' =>  'Sunny A. (UI/UX Expert)',
+									'occupation' => 'Lead Author',
+									'twitter_link' => 'https://twitter.com/@myplaneticket',
+									'twitter'=> '@myplaneticket',
+									'bootstrap' => 'https://wrapbootstrap.com/user/myorange',
+									'title' => 'Contact Sunny'
+								],
+								[
+									'foto' => 'img/demo/authors/josh.png',
+									'alt_foto' => 'Jos K.',
+									'portfolio' =>  'Jos K. (ASP.NET Developer)',
+									'occupation' => 'Partner &amp; Contributor',
+									'twitter_link' => 'https://twitter.com/@atlantez',
+									'twitter'=> '@atlantez',
+									'bootstrap' => 'https://wrapbootstrap.com/user/Walapa',
+									'title' => 'Contact Jos'
+								],
+								[
+									'foto' => 'img/demo/authors/jovanni.png',
+									'alt_foto' => 'Jovanni Lo',
+									'portfolio' =>  'Jovanni L. (PHP Developer)',
+									'occupation' => 'Partner &amp; Contributor',
+									'twitter_link' => 'https://twitter.com/@lodev09',
+									'twitter'=> '@lodev09',
+									'bootstrap' => 'https://wrapbootstrap.com/user/lodev09',
+									'title' => 'Contact Jovanni'
+								],
+								[
+									'foto' => 'img/demo/authors/roberto.png',
+									'alt_foto' => 'Jovanni Lo',
+									'portfolio' =>  'Roberto R. (Rails Developer)',
+									'occupation' => 'Partner &amp; Contributor',
+									'twitter_link' => 'https://twitter.com/@sildur',
+									'twitter'=> '@sildur',
+									'bootstrap' => 'https://wrapbootstrap.com/user/sildur',
+									'title' => 'Contact Roberto'
+								]
+									
+							];
+						   
+						    foreach($arr_user as $val){
+						   ?>
+
                             <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                                <img src="img/demo/authors/sunny.png" alt="Sunny A." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
+                                <img src="<?=$val['foto'];?>" alt="<?=$val['alt_foto'];?>" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
                                 <div class="ml-2 mr-3">
                                     <h5 class="m-0">
-                                        Sunny A. (UI/UX Expert)
+                                        <?=$val['portfolio'];?>
                                         <small class="m-0 fw-300">
-                                            Lead Author
+                                            <?=$val['occupation'];?>
                                         </small>
                                     </h5>
-                                    <a href="https://twitter.com/@myplaneticket" class="text-info fs-sm" target="_blank">@myplaneticket</a> -
-                                    <a href="https://wrapbootstrap.com/user/myorange" class="text-info fs-sm" target="_blank" title="Contact Sunny"><i class="fal fa-envelope"></i></a>
+                                    <a href="<?=$val['twitter_link'];?>" class="text-info fs-sm" target="_blank"><?=$val['twitter'];?></a> -
+                                    <a href="<?=$val['bootstrap'];?>" class="text-info fs-sm" target="_blank" title="<?=$val['title'];?>"><i class="fal fa-envelope"></i></a>
                                 </div>
                             </div>
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                                <img src="img/demo/authors/josh.png" alt="Jos K." class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                                <div class="ml-2 mr-3">
-                                    <h5 class="m-0">
-                                        Jos K. (ASP.NET Developer)
-                                        <small class="m-0 fw-300">
-                                            Partner &amp; Contributor
-                                        </small>
-                                    </h5>
-                                    <a href="https://twitter.com/@atlantez" class="text-info fs-sm" target="_blank">@atlantez</a> -
-                                    <a href="https://wrapbootstrap.com/user/Walapa" class="text-info fs-sm" target="_blank" title="Contact Jos"><i class="fal fa-envelope"></i></a>
-                                </div>
-                            </div>
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                                <img src="img/demo/authors/jovanni.png" alt="Jovanni Lo" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                                <div class="ml-2 mr-3">
-                                    <h5 class="m-0">
-                                        Jovanni L. (PHP Developer)
-                                        <small class="m-0 fw-300">
-                                            Partner &amp; Contributor
-                                        </small>
-                                    </h5>
-                                    <a href="https://twitter.com/@lodev09" class="text-info fs-sm" target="_blank">@lodev09</a> -
-                                    <a href="https://wrapbootstrap.com/user/lodev09" class="text-info fs-sm" target="_blank" title="Contact Jovanni"><i class="fal fa-envelope"></i></a>
-                                </div>
-                            </div>
-                            <div class="rounded-pill bg-white shadow-sm p-2 border-faded mr-3 d-flex flex-row align-items-center justify-content-center flex-shrink-0">
-                                <img src="img/demo/authors/roberto.png" alt="Jovanni Lo" class="img-thumbnail img-responsive rounded-circle" style="width:5rem; height: 5rem;">
-                                <div class="ml-2 mr-3">
-                                    <h5 class="m-0">
-                                        Roberto R. (Rails Developer)
-                                        <small class="m-0 fw-300">
-                                            Partner &amp; Contributor
-                                        </small>
-                                    </h5>
-                                    <a href="https://twitter.com/@sildur" class="text-info fs-sm" target="_blank">@sildur</a> -
-                                    <a href="https://wrapbootstrap.com/user/sildur" class="text-info fs-sm" target="_blank" title="Contact Roberto"><i class="fal fa-envelope"></i></a>
-                                </div>
-                            </div>
+<?php }?>
+                                   
                         </div>
                         </div>
                     </div>
