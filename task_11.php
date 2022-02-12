@@ -44,6 +44,17 @@ session_start();
                                 <div class="form-group">
                                     <?php
 
+                                    if(isset($_SESSION['len_pass'])){
+                                        unset($_SESSION['len_pass']);
+                                    ?>
+
+                                        <div class="alert alert-danger fade show" role="alert">
+                                            Пароль должен содержать от 6 символов и более
+                                        </div>
+
+                                    <?php } ?>
+                                    <?php
+
                                     if(isset($_SESSION['alert'])){
                                         unset($_SESSION['alert']);
                                     ?>
