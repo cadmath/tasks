@@ -7,6 +7,11 @@ $db = new PDO($dns, 'root','');
 $email = trim(htmlspecialchars($_POST['email']));
 $password = trim(htmlspecialchars($_POST['password']));
 
+if( mb_strlen($password) < 5 ){
+    $_SESSION['len_pass'] = true;
+    header('Location: task_11.php');
+}
+
 
 if($email and $password){
     $query_select = 'SELECT * FROM users WHERE email = :email';
