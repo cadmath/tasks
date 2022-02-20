@@ -56,7 +56,7 @@ switch ($image['type']) {
 
                 //сохраняем получившиеся значение
                 imagejpeg($resize, $small_copy);
-                echo 'Good Job';
+                header('Location: task_15.php');
 
                 imagedestroy($original);
                 imagedestroy($resize);
@@ -73,7 +73,7 @@ switch ($image['type']) {
        
                //сохраняем получившиеся значение
                imagepng($resize, $small_copy);
-               echo 'Good Job';
+               header('Location: task_15.php');
        
                imagedestroy($original);
                imagedestroy($resize);
@@ -90,7 +90,7 @@ switch ($image['type']) {
        
                //сохраняем получившиеся значение
                imagegif($resize, $small_copy);
-               echo 'Good Job';
+               header('Location: task_15.php');
        
                imagedestroy($original);
                imagedestroy($resize);
