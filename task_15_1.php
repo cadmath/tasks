@@ -51,7 +51,7 @@ $images = $data->fetchAll(PDO::FETCH_ASSOC);
                                         unset($_SESSION['alert']);
                                     ?>
                                         <div class="alert alert-danger fade show" role="alert">
-                                            Ошибка файл имеет неверное разрешение или больше 10 мегабайт
+                                            Ошибка файл имеет неверное разрешение
                                         </div>
                                     <?php } ?>
                                         <form action="task_15_handler.php" method="post" enctype="multipart/form-data">
